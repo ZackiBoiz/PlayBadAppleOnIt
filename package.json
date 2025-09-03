@@ -1,6 +1,6 @@
 {
     "name": "play-bad-apple-on-it",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Stream raw video frames from ffmpeg and emit frames for playback (Play Bad Apple on it).",
     "main": "index.js",
     "types": "index.d.ts",
