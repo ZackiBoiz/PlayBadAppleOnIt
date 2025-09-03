@@ -12,15 +12,13 @@
         "player",
         "bad-apple"
     ],
-    "author": "Your Name <you@example.com>",
+    "author": "ZackiBoiz <95724562+ZackiBoiz@users.noreply.github.com>",
     "license": "MIT",
     "engines": {
         "node": ">=18.0.0"
     },
     "scripts": {
-        "test": "node test/test.js",
-        "lint": "echo \"No linter configured\"",
-        "prepublishOnly": "npm test"
+        "lint": "echo \"No linter configured\""
     },
     "files": [
         "lib/",
@@ -36,10 +34,10 @@
     "devDependencies": {},
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yourusername/play-bad-apple-on-it.git"
+        "url": "git+https://github.com/ZackiBoiz/PlayBadAppleOnIt.git"
     },
     "bugs": {
-        "url": "https://github.com/yourusername/play-bad-apple-on-it/issues"
+        "url": "https://github.com/ZackiBoiz/PlayBadAppleOnIt/issues"
     },
-    "homepage": "https://github.com/yourusername/play-bad-apple-on-it#readme"
+    "homepage": "https://github.com/ZackiBoiz/PlayBadAppleOnIt#readme"
 }
