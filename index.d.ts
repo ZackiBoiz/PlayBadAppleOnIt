@@ -16,6 +16,8 @@ export interface PlayOptions {
 declare class PlayBadAppleOnIt extends EventEmitter {
   constructor(options: PlayOptions);
 
+  static create(options: PlayOptions): Promise<PlayBadAppleOnIt>;
+
   readonly file: string;
 
   mode: string;
@@ -31,18 +33,13 @@ declare class PlayBadAppleOnIt extends EventEmitter {
   start(): void;
   pause(): void;
   resume(): void;
-  setSpeed(speed: number): void; 
+  setSpeed(speed: number): void;
   stop(): void;
 
   on(event: "frame", listener: (frame: Buffer) => void): this;
   on(event: "end", listener: (code?: number) => void): this;
   on(event: "error", listener: (err: Error) => void): this;
   on(event: "pause" | "resume" | "stop", listener: () => void): this;
-
-  once(event: "frame", listener: (frame: Buffer) => void): this;
-  once(event: "end", listener: (code?: number) => void): this;
-  once(event: "error", listener: (err: Error) => void): this;
-  once(event: "pause" | "resume" | "stop", listener: () => void): this;
 }
 
 export = PlayBadAppleOnIt;

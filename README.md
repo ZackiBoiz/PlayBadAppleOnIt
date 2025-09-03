@@ -17,34 +17,42 @@ npm install play-bad-apple-on-it
 ```
 
 ## Example
+
 ```js
 const PlayBadAppleOnIt = require("play-bad-apple-on-it");
 
 const player = new PlayBadAppleOnIt({
-  file: "video.mp4",    // local path or http(s) URL
-  mode: "rgb24",        // ffmpeg pixel format
-  debug: false,         // boolean
-  width: 80,            // optional
-  // height: 60,        // optional
-  speed: 1,
-  loop: false,
-  fps: null
+  file: "video.mp4",
+  mode: "rgb24",
+  debug: false
 });
 
-player.on("frame", frameBuffer => {
-  // frameBuffer is a Buffer of raw frame bytes according to ffmpeg pixel format
-  console.log("Got frame of length", frameBuffer.length);
-});
-
+player.on("frame", (f) => console.log("frame", f.length));
 player.on("end", code => console.log("ended", code));
 player.on("error", err => console.error("err", err));
-
 player.start();
 
 // pause/resume/stop as needed
 // player.pause();
 // player.resume();
 // player.stop();
+```
+
+... or with a URL:
+
+
+```js
+const PlayBadAppleOnIt = require("play-bad-apple-on-it");
+
+(async () => {
+  const player = await PlayBadAppleOnIt.create({
+    file: "https://example.com/video.mp4",
+    mode: "rgb24",
+    debug: true
+  });
+  player.on("frame", f => console.log(f.length));
+  player.start();
+})();
 ```
 
 ## Notes

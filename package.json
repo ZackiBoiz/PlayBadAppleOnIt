@@ -28,9 +28,7 @@
         "LICENSE",
         "CHANGELOG.md"
     ],
-    "dependencies": {
-        "deasync": "^0.1.22"
-    },
+    "dependencies": {},
     "devDependencies": {},
     "repository": {
         "type": "git",
