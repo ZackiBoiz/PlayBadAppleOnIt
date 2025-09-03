@@ -1,0 +1,45 @@
+{
+    "name": "play-bad-apple-on-it",
+    "version": "1.0.0",
+    "description": "Stream raw video frames from ffmpeg and emit frames for playback (Play Bad Apple on it).",
+    "main": "index.js",
+    "types": "index.d.ts",
+    "keywords": [
+        "ffmpeg",
+        "video",
+        "rawvideo",
+        "frames",
+        "player",
+        "bad-apple"
+    ],
+    "author": "Your Name <you@example.com>",
+    "license": "MIT",
+    "engines": {
+        "node": ">=18.0.0"
+    },
+    "scripts": {
+        "test": "node test/test.js",
+        "lint": "echo \"No linter configured\"",
+        "prepublishOnly": "npm test"
+    },
+    "files": [
+        "lib/",
+        "index.js",
+        "index.d.ts",
+        "README.md",
+        "LICENSE",
+        "CHANGELOG.md"
+    ],
+    "dependencies": {
+        "deasync": "^0.1.22"
+    },
+    "devDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yourusername/play-bad-apple-on-it.git"
+    },
+    "bugs": {
+        "url": "https://github.com/yourusername/play-bad-apple-on-it/issues"
+    },
+    "homepage": "https://github.com/yourusername/play-bad-apple-on-it#readme"
+}
